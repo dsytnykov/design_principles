@@ -1,0 +1,23 @@
+import abstractfactory.product.Chair;
+import abstractfactory.product.CoffeeTable;
+import abstractfactory.product.Sofa;
+import abstractfactory.product.victorian.VictorianChair;
+import abstractfactory.product.victorian.VictorianCoffeeTable;
+import abstractfactory.product.victorian.VictorianSofa;
+
+public class VictorianFurnitureFactory implements FurnitureFactory {
+    @Override
+    public Chair createChair() {
+        return new VictorianChair();
+    }
+
+    @Override
+    public Sofa createSofa() {
+        return new VictorianSofa();
+    }
+
+    @Override
+    public CoffeeTable createCoffeeTable() {
+        return new VictorianCoffeeTable();
+    }
+}
