@@ -2,18 +2,18 @@ package command;
 
 import receiver.CeilingFan;
 
-public class CeilingFanOffCommand implements Command {
-    private CeilingFan ceilingFan;
-    private int previousSpeed;
+public class CeilingFanHighCommand implements Command {
 
-    public CeilingFanOffCommand(CeilingFan ceilingFan) {
+    CeilingFan ceilingFan;
+    int previousSpeed;
+
+    public CeilingFanHighCommand(CeilingFan ceilingFan) {
         this.ceilingFan = ceilingFan;
     }
-
     @Override
     public void execute() {
         previousSpeed = ceilingFan.getSpeed();
-        ceilingFan.off();
+        ceilingFan.high();
     }
 
     @Override
