@@ -25,6 +25,7 @@
         <module>command</module>
         <module>adapter</module>
         <module>facade</module>
+        <module>template_method</module>
     </modules>
 
 </project>
