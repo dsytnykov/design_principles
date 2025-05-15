@@ -3,8 +3,8 @@ import iterator.Menu;
 import iterator.MenuItem;
 
 public class Waitress {
-    private Menu pancakeHouseMenu;
-    private Menu dinerMenu;
+    private final Menu pancakeHouseMenu;
+    private final Menu dinerMenu;
 
     public Waitress(Menu pancakeHouseMenu, Menu dinerMenu) {
         this.pancakeHouseMenu = pancakeHouseMenu;
