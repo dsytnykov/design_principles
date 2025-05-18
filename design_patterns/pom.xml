@@ -28,6 +28,7 @@
         <module>template_method</module>
         <module>iterator</module>
         <module>composite</module>
+        <module>state</module>
     </modules>
 
 </project>
