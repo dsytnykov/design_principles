@@ -33,6 +33,7 @@
         <module>bridge</module>
         <module>builder</module>
         <module>chain_of_responsibility</module>
+        <module>flyweight</module>
     </modules>
 
 </project>
