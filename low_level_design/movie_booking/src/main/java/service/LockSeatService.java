@@ -25,8 +25,8 @@ public class LockSeatService {
         return locks.compute(key, (k, v) -> (v == null || v.deadline <= now) ? expiry : v) == expiry;
     }
 
-    public void unlock(String key) {
-        locks.remove(key);
+    public Expiry unlock(String key) {
+        return locks.remove(key);
     }
 
     public boolean isLockExpired(String key) {
@@ -43,5 +43,5 @@ public class LockSeatService {
         sweeper.shutdown();
     }
 
-    private record Expiry(long deadline, String owner) { }
+    public record Expiry(long deadline, String owner) { }
 }

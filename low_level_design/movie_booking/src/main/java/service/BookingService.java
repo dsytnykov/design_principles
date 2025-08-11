@@ -1,5 +1,6 @@
 package service;
 
+import model.Performance;
 import model.booking.Booking;
 import model.booking.BookingStatus;
 import model.seat.Seat;
@@ -22,7 +23,7 @@ public class BookingService {
         this.lockSeatService = lockSeatService;
     }
 
-    public Booking book(String userId, model.Performance performance, List<Seat> seats) {
+    public Booking book(String userId, Performance performance, List<Seat> seats) {
         for( Seat seat : seats) {
             String key = String.format("%s:%s", performance.getId(), seat.getId());
             if(!lockSeatService.tryLock(key, userId, LOCK_TTL)) {
