@@ -11,6 +11,7 @@
     <modules>
         <module>creation</module>
         <module>simplification</module>
+        <module>generalisation</module>
     </modules>
 
     <properties>
